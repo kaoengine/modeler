@@ -1,0 +1,29 @@
+{
+  "name": "modeler",
+  "version": "1.0.5",
+  "description": "Kao modeler stuff",
+  "main": "build/model.js",
+  "keywords": [
+    "model",
+    "javascript",
+    "js"
+  ],
+  "author": {
+    "name": "alias"
+  },
+  "license": "The MIT License",
+  "scripts": {
+    "build": "babel src/*.js -d build",
+    "min": "babel build/*.js --minified --no-babelrc -o build/*.min.js",
+    "test": "mocha --compilers js:babel-core/register ./test/*.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "manba": "^1.2.8"
+  },
+  "readmeFilename": "README.md"
+}
